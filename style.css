@@ -1,10 +1,109 @@
-.canvas {
-  z-index: 0;
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #8b64ff;
+  color: white;
+  font-size: 30px;
+}
+
+h2 {
+  margin: 0 auto;
+  padding: 10px;
+  text-align: left;
+  background: #64b2ff;
+  color: white;
+  font-size: 30px;
+}
+
+canvas {
+  float: left;
+  border: 5px solid black
+}
+label {
+  border: 1px solid black;
+  margin: 0px
+}
+
+
+.myslider {
+  -webkit-appearance: none;
+  width: 50%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: 20px;
+}
+
+.myslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.myslider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+#canvas1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 750px;
 }
 
 #chart {
-  z-index: 1;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  top: 0;
+  left: 50%;
+  height: 500px;
+  width: 750px;
+}
+
+#canvas3 {
+  position: relative;
+  top: 50%;
   left: 0;
+  height: 500px;
+  width: 750px;
+}
+
+#chart2 {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  height: 500px;
+  width: 750px;
+}
+
+#button1 {
+  width: 300px;
+  height: 40px;
+}
+
+#button2 {
+  width: 300px;
+  height: 40px;
+}
+
+#container {
+  text-align: center;
+  padding: 20px
 }

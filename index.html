@@ -4,24 +4,54 @@
 <head>
   <meta charset="utf-8">
   <meta na="description" content="This is an example of ">
-  <meta name=viewport content="width=device-width, initial width">
+  <meta name=viewport content="width=device-width">
+  <title>Distribution</title>
   <script src="plotly.min.js"></script>
-  <title>Canvas</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<div style="position: relative;">
- <canvas id="layer1"></canvas>
- <!---
- <canvas id="layer2" ></canvas>
- --->
-</div>
-<div id="chart">
-
-</div>
+  <div class="header">
+    <h1>Gaussian vs normal distributions</h1>
+    <p>Compare Gaussian and normal distributions! This simulation randomly places dots on a canvas using the mentioned distributions. The graphs show a cross section of the number of dots through the middle of the canvas. Use the reset keys at the
+      bottom of the page to reset the simulation. </p>
+  </div>
+  <div id=div1>
+    <h2>Guassian:</h2>
+    <canvas id="canvas1"></canvas>
+  </div>
+  <div id=chart>
+  </div>
+  <div id=div3>
+    <div class="rangeslider">
+      <input type="checkbox" class = "bargraph" id = "checkbox1" checked = false>
+      <label class = "bargraph">Bar Graph</label><br>
+      <input type="range" min="1" max="200" value="10" class="myslider" id="sliderRange">
+      <div id = "this">
+        <label>Bins:</label>
+        <label id="number_of_bins">Bins:</label>
+      </div>
+    </div>
+    <h2>Uniform:</h2>
+    <canvas id="canvas3"></canvas>
+  </div>
+  <div id=chart2 style=" top:0;left:50%; ">
+  </div>
+  <div class="rangeslider">
+    <input type="checkbox" class = "bargraph" id = "checkbox2">
+    <label class = "bargraph">Bar Graph</label><br>
+    <input type="range" min="1" max="200" value="10" class="myslider" id="sliderRange2">
+    <label>Bins:</label>
+    <label id="number_of_bins2">Bins:</label>
+  </div>
+  <div id="container">
+    <button type="button home-button" id="button1" value="reset" onclick="reset();">Reset Guassian</button>
+    <button type="button contact-button" id="button2" value="reset2" onclick="reset2();">Reset Uniform</button>
+  </div>
 </body>
 <script src="main.js"></script>
 <script src="main2.js"></script>
+<script src="anim.js"></script>
+
 
 </html>
